@@ -4,10 +4,12 @@ from random import randint
 
 
 def pick_lotto():
-    maxm = 53
-    maxj = 6
+    maxm = 69
+    maxj = 5
     m = maxm
+    maxp = 26
     r = list(range(m + 1))
+    p = list(range(maxp + 1))
     v = []
     for j in range(maxj):
         i = randint(1, m)
@@ -15,6 +17,8 @@ def pick_lotto():
         r[i:i + 1] = []
         m = m - 1
         v.append(n)
+    power_ball = randint(1, maxp)
+    v.append(f"Powerball: {power_ball}")
     return v
 
 
